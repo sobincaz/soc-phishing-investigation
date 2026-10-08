@@ -1,0 +1,15 @@
+From: Microsoft Account Security <security-alert@example.com>
+To: employee@example.com
+Subject: Urgent: Your account will be suspended
+Date: 07 October 2026
+
+Your account has been flagged for unusual activity.
+
+Your account will be suspended within 24 hours unless you verify your identity.
+
+Please verify your account here:
+https://example.com/account-verification
+
+Failure to verify may result in permanent account suspension.
+
+Microsoft Account Security
