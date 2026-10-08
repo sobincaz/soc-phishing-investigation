@@ -1,0 +1,49 @@
+SOC PHISHING EMAIL INVESTIGATION REPORT
+
+Incident Summary
+
+A simulated phishing email was investigated as part of a SOC analyst training exercise. The email used urgency, a threat of account suspension, a suspicious sender address, and an account verification link to encourage the recipient to take action.
+
+Email Details
+
+From: Microsoft Account Security <security-alert@example.com>
+To: employee@example.com
+Subject: Urgent: Your account will be suspended
+Date: 07 October 2026
+
+Initial Assessment:
+The email was identified as suspicious due to the sender domain, urgent language, account suspension threat, and verification link.
+
+Investigation Findings
+
+1. URL Analysis – VirusTotal
+Finding: The URL returned an HTTP 404 response. No evidence from this result confirmed that the URL was malicious.
+
+2. URL Analysis – URLScan.io
+Finding: The scan showed network activity involving 1 IP address and 1 country. No malicious conclusion was made from this scan alone.
+
+3. Email Header Analysis
+Finding: The sender claims to represent Microsoft but uses the example.com domain. SPF, DKIM, and DMARC passed, but authentication alone does not prove that the email is legitimate.
+
+4. Base64 Analysis – CyberChef
+Finding: The Base64 string decoded to https://example.com.
+
+5. MITRE ATT&CK
+Technique: Phishing: Spearphishing Link
+Technique ID: T1566.002
+Tactic: Initial Access
+
+
+Severity Assessment
+
+Severity: Medium
+
+Reason: The email contains multiple phishing indicators, including urgency, a threat of account suspension, a suspicious sender, and a verification link. However, the simulated URL analysis did not confirm malicious activity.
+
+Conclusion
+
+The email was assessed as a simulated phishing attempt using social-engineering techniques. The investigation identified several suspicious indicators and mapped the activity to MITRE ATT&CK T1566.002 – Phishing: Spearphishing Link.
+
+Recommended Action
+
+Users should avoid clicking suspicious links and verify account-related requests through the organization's official website or trusted channels.

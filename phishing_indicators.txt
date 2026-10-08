@@ -1,0 +1,78 @@
+Phishing Indicators:
+
+1.Urgency:the email contains urgency: "with in 24 hours"
+
+2.Threat: the email contains threat: "permanent account suspend"
+
+3.Suspicious sender: security-alert@example.com 
+
+4.Account verification request: asks the user to verify their identity
+
+5.suspicious link:https://example.com/account-verification
+
+
+
+URL Analysis:
+
+URL: https://example.com/account-verification
+Tool:VirusTotal
+Finding: HTTP 404 response; no evidence from this result that the URL is malicious.
+Note: example.com is a reserved example domain used for safe testing.
+
+Domain:example.com
+Tool:URLSCAN.io
+Finding:This website contacted 1 IPs in 1 countries across 1 domains to perform 2 HTTP transactions.
+
+
+Email Header Analysis:
+
+Tool: Manual Header Analysis(Note Pad)  
+
+1. From
+Analysis: The sender claims to represent Microsoft, but uses example.com. This is suspicious.
+
+2. Reply-To
+Analysis: The Reply-To address matches the From address. No mismatch was observed.
+
+3. Return-Path
+Analysis: The Return-Path matches the From address. No mismatch was observed.
+
+4. Received
+Analysis: The header shows mail.example.com (192.0.2.10). This is a documentation/example IP used for this simulation.
+
+5. SPF / DKIM / DMARC
+Analysis: SPF, DKIM and DMARC all passed. However, authentication passing does not prove that the email is legitimate. 
+
+
+
+Base64 Analysis:
+
+Tool: CyberChef
+
+Input: aHR0cHM6Ly9leGFtcGxlLmNvbQ==
+
+Finding: The Base64 string decoded to https://example.com.
+
+Observation: The encoded data represents a URL.
+
+
+
+MITRE ATT&CK Mapping:
+
+Technique: Phishing: Spearphishing Link
+Technique ID: T1566.002
+Tactic: Initial Access
+
+Finding: The simulated phishing email contains a link that asks the recipient to verify their account. This behavior maps to MITRE ATT&CK technique T1566.002.
+
+
+
+
+
+
+
+Incident Severity:
+
+Severity: Medium
+
+Reason: The email contains multiple phishing indicators, including urgency, a threat of account suspension, a suspicious sender, and a verification link. However, the simulated URL analysis did not confirm malicious activity.

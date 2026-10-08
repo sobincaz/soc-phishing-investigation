@@ -1,0 +1,7 @@
+From: Microsoft Account Security <security-alert@example.com>
+Reply-To: security-alert@example.com
+Return-Path: <security-alert@example.com>
+Subject: Urgent: Your account will be suspended
+Message-ID: <sample-12345@example.com>
+Received: from mail.example.com (192.0.2.10) by mail.example.net;
+Authentication-Results: spf=pass dkim=pass dmarc=pass
